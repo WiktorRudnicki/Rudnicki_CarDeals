@@ -23,9 +23,9 @@
             <span>
                 {{car.description}}
             </span>
-            <v-button @click="gekauft()">
+            <v-btn @click="gekauft()">
                 BUY CAR
-            </v-button>
+            </v-btn>
         </v-card>
     </v-app>
 </template>
