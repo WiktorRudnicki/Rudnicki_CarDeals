@@ -25,7 +25,7 @@
                     {{car.description}}
                 </span>
                 <br>
-                <v-btn @click="gekauft()" class="red" style="width: 100px">
+                <v-btn @click="gekauft(car)" class="red" style="width: 100px">
                     BUY CAR
                 </v-btn>
             </v-card>
@@ -40,9 +40,18 @@ export default {
         cars: [],
         
     }),
-    async gekauft: () => ({
-        
-    }),
+    methods: {
+        async gekauft(car) {
+        car.title += "RESERVED";
+        await axios ({
+             method: "PATCH",
+             url: 'localhost:3000/cars/' + car.id,
+             'content-type': 'application/json',
+             data: car,
+        })
+    },
+
+    },
     async created() {
         let response = await axios.get('http://localhost:3000/cars');
         this.cars = response.data;
