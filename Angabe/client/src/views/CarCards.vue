@@ -1,7 +1,7 @@
 <template>
     <v-app>
         <v-row class="d-flex flex-wrap justify-center">
-            <v-card v-for="(car, id) in this.cars" :key="id" style="width: 300px" class="ma-3 d-flex flex-column">
+            <v-card v-for="(car, id) in this.cars" :key="id" style="width: 300px" class="ma-3 d-flex flex-column padding: 10px">
                 <v-img :src="car.image"></v-img>
                 <h1>
                     {{car.title}}
@@ -24,7 +24,8 @@
                 <span>
                     {{car.description}}
                 </span>
-                <v-btn @click="gekauft()" class="red">
+                <br>
+                <v-btn @click="gekauft()" class="red" style="width: 100px">
                     BUY CAR
                 </v-btn>
             </v-card>
@@ -37,6 +38,9 @@ import axios from "axios";
 export default {
     data: () => ({
         cars: [],
+        
+    }),
+    async gekauft: () => ({
         
     }),
     async created() {

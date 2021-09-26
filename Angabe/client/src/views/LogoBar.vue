@@ -1,9 +1,7 @@
 <template>
-    <v-app>
-        <v-container class="black d-flex flex-wrap flex-row" style="height: 10% width: 100%">
-            <v-img src="../../public/logo.png"></v-img>
-        </v-container>
-    </v-app>
+    <v-app-bar class=" black" height="200px">
+        <img src="../../public/logo.png" class="mx-2" style="height: 150px; margin-top: 0px"/>
+    </v-app-bar>
 </template>
 
 <script>

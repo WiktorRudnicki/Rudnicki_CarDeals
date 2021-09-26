@@ -1,8 +1,8 @@
 <template>
   <v-app>
+    <LogoBar></LogoBar>
     <v-main>
-      <v-container class="d-flex flex-wrap">
-        <LogoBar style="width: 100% height: 5%"></LogoBar>
+      <v-container>
         <CarCards></CarCards>
       </v-container>
     </v-main>
